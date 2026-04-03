@@ -1,6 +1,6 @@
 # Musterdatenkatalog Georeferenzierung
 
-This project takes municipality names from a catalog CSV and places them on a map of Germany.
+This project georeferences municipality names from the Musterdatenkatalog CSV using official German municipality boundaries and turns the result into a map.
 
 ## What It Does
 
