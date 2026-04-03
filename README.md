@@ -67,6 +67,12 @@ Raw inputs are downloaded from official sources:
 - Musterdatenkatalog CSV: `https://www.bertelsmann-stiftung.de/fileadmin/files/musterdatenkatalog/2025-06-13_musterdatenkatalog.csv`
 - Municipality geodata: BKG VG250 Gemeinden (`VG250_GEM`) via the official BKG direct download
 
+## Related Project
+
+This repository is a downstream georeferencing and mapping workflow for the Musterdatenkatalog. The main Musterdatenkatalog repository and issue tracker are here:
+
+- Main repository: `https://github.com/bertelsmannstift/Musterdatenkatalog-V4`
+
 ## Important Note
 
 Matching is no longer exact-name only. The script removes safe administrative prefixes such as `Gemeinde` and `Verbandsgemeinde`, applies a small alias list for known shorthand and typo cases, and writes unmatched names with suggestions to `gemeinden_match_report.csv`. The current alias list already fixes `Fürstenwald/Spree`, `Kreisstadt Dietzenbach`, and `Kreisstadt Hofheim am Taunus`.
