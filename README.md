@@ -33,17 +33,13 @@ The result is a normalized match report, a row-level CSV with matched municipali
 
 ## Run Locally
 
-Use `make` as the main entry point.
-
-For the main workflow, run:
+Use `make` as the main entry point. Run `make all` for the main workflow:
 
 ```bash
 make all
 ```
 
-`make all` downloads the raw inputs, builds the matched outputs, and generates the HTML map.
-
-For setup and validation around that workflow, run:
+`make all` downloads the raw inputs, builds the matched outputs, and generates the HTML map. For setup and validation around that workflow, run:
 
 ```bash
 make sync
@@ -55,22 +51,12 @@ This sequence installs dependencies, runs the full pipeline, and executes the of
 
 Individual `make` targets:
 
-- `make sync`: install project and dev dependencies with `uv`
+- `make sync`: install project and dev dependencies
 - `make data`: download the raw catalog CSV and municipality geodata
 - `make build`: generate the match report, enriched CSV, and merged GeoJSON
 - `make map`: generate `gemeinden_map.html`
 - `make all`: run the full download/build/map workflow
 - `make test`: run the offline compile check and `pytest` suite
-
-Equivalent direct `uv` commands:
-
-```bash
-uv sync
-uv run python scripts/download_musterdatenkatalog.py
-uv run python scripts/download_gemeinden_geodaten.py
-uv run georeferenzierung.py
-uv run map.py
-```
 
 Raw inputs are downloaded from official sources:
 
