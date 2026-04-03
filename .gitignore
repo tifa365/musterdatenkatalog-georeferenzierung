@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+*.pyc
+AGENTS.md
+musterdatenkatalog.csv
+gemeinden_geodaten/
+musterdatenkatalog_georeferenziert.csv
+gemeinden_match_report.csv
