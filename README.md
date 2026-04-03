@@ -33,17 +33,27 @@ The result is a normalized match report, a row-level CSV with matched municipali
 
 ## Run Locally
 
-Use `make` as the main entry point:
+Use `make` as the main entry point.
+
+For the main workflow, run:
+
+```bash
+make all
+```
+
+`make all` downloads the raw inputs, builds the matched outputs, and generates the HTML map.
+
+For setup and validation around that workflow, run:
 
 ```bash
 make sync
-make data
-make build
-make map
+make all
 make test
 ```
 
-Target overview:
+This sequence installs dependencies, runs the full pipeline, and executes the offline test suite.
+
+Individual `make` targets:
 
 - `make sync`: install project and dev dependencies with `uv`
 - `make data`: download the raw catalog CSV and municipality geodata
